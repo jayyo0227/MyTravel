@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/attractionsFragment">
+
+    <fragment
+        android:id="@+id/attractionsFragment"
+        android:name="jayyo.mytravel.ui.AttractionsFragment"
+        android:label="Attractions"
+        tools:layout="@layout/fragment_attractions" >
+        <action
+            android:id="@+id/action_attractionsFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="jayyo.mytravel.ui.DetailFragment"
+        android:label="Detail Fragment">
+        <argument
+            android:name="introduction"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,37 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="attraction"
+            type="jayyo.mytravel.model.Attraction" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{attraction.name}"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/detail_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{attraction.introduction}"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detail_official_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{attraction.officialSite}"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>
