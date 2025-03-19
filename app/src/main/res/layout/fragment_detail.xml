@@ -7,31 +7,64 @@
             type="jayyo.mytravel.model.Attraction" />
     </data>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/detail_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{attraction.name}"
-            android:textSize="30sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/detail_introduction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{attraction.introduction}"
-            android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription=""
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty" />
 
-        <TextView
-            android:id="@+id/detail_official_site"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{attraction.officialSite}"
-            android:textSize="12sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{attraction.name}"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/detail_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{attraction.introduction}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/detail_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{@string/detail_address+attraction.address}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/detail_modified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{@string/detail_modified+attraction.modified}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/detail_official_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autoLink="all"
+                android:text="@{attraction.officialSite}"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
 </layout>

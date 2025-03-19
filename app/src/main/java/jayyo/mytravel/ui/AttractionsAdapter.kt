@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import jayyo.mytravel.R
 import jayyo.mytravel.data.Detail
 import jayyo.mytravel.databinding.ItemAttractionBinding
@@ -34,12 +35,19 @@ class AttractionsAdapter(private val navController: NavController) :
         fun bind(attraction: Attraction) {
             binding.attraction = attraction
             binding.itemLayout.setOnClickListener {
-                Detail.name = attraction.name
-                Detail.introduction = attraction.introduction
-                Detail.officialSite = attraction.officialSite
+                Detail.attraction = attraction
 
                 navController.navigate(R.id.action_attractionsFragment_to_detailFragment)
             }
+
+            if (attraction.images.isNotEmpty()) {
+                Picasso.get()
+                    .load(attraction.images[0].src.ifEmpty { null })
+                    .placeholder(R.drawable.empty)
+                    .error(R.drawable.empty)
+                    .into(binding.image)
+            }
+
             binding.executePendingBindings()
         }
     }

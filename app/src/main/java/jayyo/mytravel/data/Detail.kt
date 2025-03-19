@@ -1,7 +1,7 @@
 package jayyo.mytravel.data
 
+import jayyo.mytravel.model.Attraction
+
 object Detail {
-    var name: String = ""
-    var introduction: String = ""
-    var officialSite: String = ""
+    lateinit var attraction: Attraction
 }

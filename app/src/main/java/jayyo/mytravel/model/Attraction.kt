@@ -21,6 +21,9 @@ data class Attraction(
     @SerializedName("official_site")
     val officialSite: String,
 
+    @SerializedName("modified")
+    val modified: String,
+
     @SerializedName("images")
     val images: List<Image>,
 )
