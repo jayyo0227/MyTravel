@@ -1,4 +1,4 @@
-package jayyo.mytravel.ViewModel
+package jayyo.mytravel.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

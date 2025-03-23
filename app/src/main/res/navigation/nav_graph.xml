@@ -26,5 +26,14 @@
             android:name="introduction"
             app:argType="string"
             app:nullable="true"/>
+
+        <action
+            android:id="@+id/action_detailFragment_to_webViewActivity"
+            app:destination="@id/webViewActivity" />
     </fragment>
+
+    <activity
+        android:id="@+id/webViewActivity"
+        android:name="jayyo.mytravel.ui.WebViewActivity"
+        android:label="WebView" />
 </navigation>

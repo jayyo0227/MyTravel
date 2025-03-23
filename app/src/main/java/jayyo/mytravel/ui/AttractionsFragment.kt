@@ -10,8 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import jayyo.mytravel.R
-import jayyo.mytravel.ViewModel.AttractionViewModel
-import jayyo.mytravel.ViewModel.AttractionViewModelFactory
+import jayyo.mytravel.viewModel.AttractionViewModel
+import jayyo.mytravel.viewModel.AttractionViewModelFactory
 import jayyo.mytravel.data.AttractionRepository
 import jayyo.mytravel.data.RetrofitClient
 import jayyo.mytravel.databinding.FragmentAttractionsBinding

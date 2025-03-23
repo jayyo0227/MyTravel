@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.squareup.picasso.Picasso
 import jayyo.mytravel.R
 import jayyo.mytravel.data.Detail
@@ -29,6 +30,11 @@ class DetailFragment : Fragment() {
                 .placeholder(R.drawable.empty)
                 .error(R.drawable.empty)
                 .into(binding.detailImage)
+        }
+
+        binding.detailOfficialSite.setTextColor(binding.detailOfficialSite.linkTextColors)
+        binding.detailOfficialSite.setOnClickListener {
+            findNavController().navigate(R.id.action_detailFragment_to_webViewActivity)
         }
 
         return view
