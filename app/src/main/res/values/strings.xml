@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">My Travel</string>
+
     <string name="detail_address">Address\n</string>
     <string name="detail_modified">Last Updated Time\n</string>
+    <string name="language">語言</string>
 </resources>

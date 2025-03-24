@@ -27,7 +27,7 @@ class DetailFragment : Fragment() {
         if (Detail.attraction.images.isNotEmpty()) {
             Picasso.get()
                 .load(Detail.attraction.images[0].src.ifEmpty { null })
-                .placeholder(R.drawable.empty)
+                .placeholder(R.drawable.loading)
                 .error(R.drawable.empty)
                 .into(binding.detailImage)
         }

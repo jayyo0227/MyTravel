@@ -21,12 +21,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="jayyo.mytravel.ui.DetailFragment"
-        android:label="Detail Fragment">
-        <argument
-            android:name="introduction"
-            app:argType="string"
-            app:nullable="true"/>
-
+        android:label="Detail">
         <action
             android:id="@+id/action_detailFragment_to_webViewActivity"
             app:destination="@id/webViewActivity" />

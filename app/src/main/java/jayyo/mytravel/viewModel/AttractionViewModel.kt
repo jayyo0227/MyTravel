@@ -18,10 +18,9 @@ class AttractionViewModel(private val repository: AttractionRepository) : ViewMo
             try {
                 val response = repository.getAttractions()
                 _attractions.value = response.data
-
-                println(response.data[1].images[0].src)
             } catch (e: Exception) {
-                e.stackTrace
+                println("載入失敗")
+                e.printStackTrace()
             }
         }
     }

@@ -43,7 +43,7 @@ class AttractionsAdapter(private val navController: NavController) :
             if (attraction.images.isNotEmpty()) {
                 Picasso.get()
                     .load(attraction.images[0].src.ifEmpty { null })
-                    .placeholder(R.drawable.empty)
+                    .placeholder(R.drawable.loading)
                     .error(R.drawable.empty)
                     .into(binding.image)
             }
