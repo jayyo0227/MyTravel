@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -66,7 +65,6 @@ class AttractionsFragment : Fragment(R.layout.fragment_attractions) {
     private fun showLanguages() {
         val languages =
             arrayOf("繁體中文", "簡體中文", "English", "日本語", "한국어", "es", "th", "vi")
-//        , "id"    6 -> Detail.language = "id"
 
         AlertDialog.Builder(requireContext())
             .setItems(languages) { dialog, which ->

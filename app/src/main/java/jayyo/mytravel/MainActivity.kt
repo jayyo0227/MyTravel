@@ -1,8 +1,6 @@
 package jayyo.mytravel
 
-import android.os.Build
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -22,15 +20,6 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         setupActionBarWithNavController(navController)
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-            enableEdgeToEdge()
-
-            supportActionBar?.apply {
-                setBackgroundDrawable(null)
-                title = ""
-            }
-        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
